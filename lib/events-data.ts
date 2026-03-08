@@ -1,30 +1,33 @@
-export interface Event {
+export type Event = {
   id: number
   name: string
   category: string
   description: string
   location: string
+  date: string
 }
 
+export const eventCategories = ["Outdoors", "Food & Drink", "Arts & Culture", "Family", "Nightlife", "Sports"]
+
 export const events: Event[] = [
-  { id: 1, name: "Caldwell Zoo", category: "Family", description: "One of the top free-admission zoos in the US. 3,500+ animals.", location: "4001 Martin Luther King Blvd" },
-  { id: 2, name: "Tyler Rose Garden", category: "Outdoors", description: "The largest rose garden in the US - 35,000 rose bushes, 500 varieties.", location: "420 Rose Park Dr" },
-  { id: 3, name: "Tyler State Park", category: "Outdoors", description: "Hiking, swimming, and camping in the Piney Woods.", location: "789 Park Rd 16" },
-  { id: 4, name: "Cotton Belt Brewing", category: "Food & Drink", description: "Local craft brewery with rotating taps and live music weekends.", location: "101 W Front St" },
-  { id: 5, name: "Liberty Hall", category: "Nightlife", description: "Tyler's premier live music venue. Local and touring acts every weekend.", location: "103 E Line St" },
-  { id: 6, name: "Lake Tyler", category: "Outdoors", description: "Kayaking, fishing, and paddleboarding on Tyler's city lake.", location: "4000 S Loop 323" },
-  { id: 7, name: "The Foundry", category: "Food & Drink", description: "Upscale American eats in a converted industrial space. Great cocktails.", location: "Downtown Tyler" },
-  { id: 8, name: "Goodman-LeGrand Museum", category: "Arts", description: "Historic home museum showcasing East Texas history and artifacts.", location: "624 N Broadway Ave" },
-  { id: 9, name: "Discovery Science Place", category: "Family", description: "Hands-on science museum for all ages.", location: "308 N Broadway Ave" },
-  { id: 10, name: "Lake Palestine", category: "Outdoors", description: "Boating, fishing, and waterfront dining 30 min from Tyler.", location: "Frankston, TX" },
-  { id: 11, name: "Bergfeld Park", category: "Family", description: "Tyler's beloved city park - walking trails and weekend events.", location: "1510 S College Ave" },
-  { id: 12, name: "Tyler Museum of Art", category: "Arts", description: "Regional and national exhibitions in a modern gallery space.", location: "1300 S Mahon Ave" },
-  { id: 13, name: "East Texas State Fair", category: "Family", description: "Annual September fair with rides, food, livestock, and concerts.", location: "2112 W Front St" },
-  { id: 14, name: "ETX Brewing Co.", category: "Food & Drink", description: "Award-winning craft brewery with full food menu and patio.", location: "221 S Broadway Ave" },
-  { id: 15, name: "Cinergy Tyler", category: "Family", description: "Bowling, mini golf, go-karts, and arcade all in one spot.", location: "6800 S Broadway Ave" },
-  { id: 16, name: "Degan's Wine Bar", category: "Nightlife", description: "Cozy wine bar with Texas wine selection and small plates.", location: "302 W Erwin St" },
-  { id: 17, name: "Fern + Foliage", category: "Food & Drink", description: "Plant-based cafe with creative brunch plates and specialty coffee.", location: "Tyler, TX" },
-  { id: 18, name: "Rosevine Inn B&B", category: "Arts", description: "Charming bed and breakfast with rose gardens.", location: "415 S Vine Ave" },
-  { id: 19, name: "UT Tyler Patriot Arena", category: "Family", description: "Home to UT Tyler athletics - games and events year-round.", location: "3900 University Blvd" },
-  { id: 20, name: "Oil Museum", category: "Arts", description: "History of the East Texas oil boom in a fascinating exhibit.", location: "Tyler, TX" },
+  { id: 1, name: "Caldwell Zoo Weekend Safari", category: "Family", description: "Explore one of Texas's top-rated zoos with over 2,000 animals.", location: "Caldwell Zoo", date: "Every Weekend" },
+  { id: 2, name: "Tyler Rose Garden Tour", category: "Outdoors", description: "Walk through 14 acres of the nation's largest municipal rose garden.", location: "Tyler Rose Garden", date: "Daily" },
+  { id: 3, name: "Tyler State Park Trail Day", category: "Outdoors", description: "Hiking, biking, and kayaking in 985 acres of East Texas pines.", location: "Tyler State Park", date: "Weekends" },
+  { id: 4, name: "Cotton Belt Brewing Tap Takeover", category: "Food & Drink", description: "Rotating guest brewery takeovers with live music and food trucks.", location: "Cotton Belt Brewing", date: "First Friday" },
+  { id: 5, name: "Liberty Hall Live Music Night", category: "Nightlife", description: "Tyler's best live music venue featuring local and touring bands.", location: "Liberty Hall", date: "Fri & Sat" },
+  { id: 6, name: "Lake Tyler Sunset Paddle", category: "Outdoors", description: "Kayak and paddleboard rentals at sunset.", location: "Lake Tyler", date: "Weekends" },
+  { id: 7, name: "The Foundry Chef's Table", category: "Food & Drink", description: "Exclusive multi-course dinner with wine pairings.", location: "The Foundry", date: "Monthly" },
+  { id: 8, name: "Goodman-LeGrand Museum Tour", category: "Arts & Culture", description: "Step back in time in this 1859 antebellum home turned museum.", location: "Goodman-LeGrand Museum", date: "Tue-Sat" },
+  { id: 9, name: "Discovery Science Place Kids Day", category: "Family", description: "Hands-on science exhibits and workshops for kids.", location: "Discovery Science Place", date: "Saturdays" },
+  { id: 10, name: "Lake Palestine Fishing Tournament", category: "Sports", description: "Annual bass fishing tournament on one of East Texas's premier lakes.", location: "Lake Palestine", date: "Spring" },
+  { id: 11, name: "Bergfeld Park Farmers Market", category: "Food & Drink", description: "Fresh local produce, artisan goods, and live music.", location: "Bergfeld Park", date: "Saturdays" },
+  { id: 12, name: "Tyler Museum of Art Exhibition", category: "Arts & Culture", description: "Rotating exhibitions featuring regional and national artists.", location: "Tyler Museum of Art", date: "Tue-Sun" },
+  { id: 13, name: "East Texas State Fair", category: "Family", description: "The biggest annual event in Tyler. Rides, food, livestock shows.", location: "East Texas State Fairgrounds", date: "September" },
+  { id: 14, name: "ETX Brewing Co. Trivia Night", category: "Nightlife", description: "Weekly pub trivia with craft beer specials.", location: "ETX Brewing Co.", date: "Wednesdays" },
+  { id: 15, name: "Cinergy Tyler Movie Night", category: "Family", description: "Luxury recliners, bowling, and arcade games.", location: "Cinergy Tyler", date: "Daily" },
+  { id: 16, name: "Degan's Wine Tasting", category: "Food & Drink", description: "Weekly wine tastings featuring Texas vineyards.", location: "Degan's Wine Bar", date: "Thursdays" },
+  { id: 17, name: "Fern + Foliage Brunch Pop-Up", category: "Food & Drink", description: "Special weekend brunch menus with plant-based creations.", location: "Fern + Foliage", date: "Weekends" },
+  { id: 18, name: "Rosevine Inn Garden Party", category: "Arts & Culture", description: "Elegant garden parties at Tyler's charming bed and breakfast.", location: "Rosevine Inn", date: "Monthly" },
+  { id: 19, name: "UT Tyler Basketball Game", category: "Sports", description: "Cheer on the Patriots at UT Tyler's arena.", location: "UT Tyler Patriot Arena", date: "Season" },
+  { id: 20, name: "East Texas Oil Museum Tour", category: "Arts & Culture", description: "Interactive exhibits telling the story of the East Texas oil boom.", location: "East Texas Oil Museum", date: "Tue-Sat" },
 ]
